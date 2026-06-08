@@ -1,148 +1,136 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Inter">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Paciente</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Paciente - MedHome</title>
+<link rel="stylesheet" href="css/cadastropaciente.css">
 </head>
 
 <body>
-    <i id="voltar" class="fa-solid fa-arrow-left"></i>
-    <div class="container">
 
-        <h1 id="titulo">
-            Cadastro de paciente
-        </h1>
+<div class="container">
 
-        <p id="subtitulo">
-            Preencha os dados para cadastro do profissional da saúde
-        </p>
-
-        <form>
-
-            <div class="section">
-                <h2>
-                    <i class="fa-solid fa-circle-user"></i>
-                    Dados pessoais
-                </h2>
-
-                <label>
-                    <i class="fa-regular fa-user"></i>
-                    Nome completo
-                </label>
-                <input type="text" placeholder="Digite seu nome completo">
-
-                <div class="linha">
-                    <div>
-                        <label>
-                            <i class="fa-regular fa-id-card"></i>
-                            CPF
-                        </label>
-                        <input type="text" placeholder="000.000.000-00">
-                    </div>
-
-                    <div>
-                        <label>
-                            <i class="fa-regular fa-calendar"></i>
-                            Data de nascimento
-                        </label>
-                        <input type="date" class="data">
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>
-                    <i class="fa-solid fa-phone"></i>
-                    Contato
-                </h2>
-
-                <label>
-                    <i class="fa-solid fa-phone"></i>
-                    Telefone
-                </label>
-                <input type="text" placeholder="(89) 99999-9999">
-
-                <label>
-                    <i class="fa-regular fa-envelope"></i>
-                    Email
-                </label>
-                <input type="email" placeholder="seuemail@gmail.com">
-            </div>
-
-            <div class="linha">
-                <div>
-                    <label>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Endereço
-                    </label>
-                    <input type="text" placeholder="Rua, Avenida, etc">
-                </div>
-
-                <div>
-                    <label>
-                        <i class="fa-solid fa-city"></i>
-                        Cidade
-                    </label>
-                    <input type="text" placeholder="Sua cidade">
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>
-                    <i class="fa-solid fa-notes-medical"></i>
-                    Informações médicas
-                </h2>
-            </div>
-
-            <label>
-                <i class="fa-solid fa-credit-card"></i>
-                Número da carteirinha
-            </label>
-            <input type="text" placeholder="Digite o número da carteirinha">
-
-            <label>
-                <i class="fa-solid fa-stethoscope"></i>
-                Diagnóstico
-            </label>
-            <input type="text" placeholder="Digite o diagnóstico">
-
-            <label>
-                <i class="fa-regular fa-note-sticky"></i>
-                Observações
-            </label>
-            <input type="text" placeholder="Digite observações adicionais">
-
-            <div class="section">
-                <h2>
-                    <i class="fa-solid fa-shield-halved"></i>
-                    Segurança
-                </h2>
-            </div>
-
-            <label>
-                <i class="fa-solid fa-lock"></i>
-                Senha
-            </label>
-            <input type="password" placeholder="Digite sua senha">
-
-            <div class="botoes">
-                <button type="button">
-                    Cancelar
-                </button>
-
-                <button type="submit">
-                    Cadastrar
-                </button>
-            </div>
-
-        </form>
+    <div class="header">
+        <h1>Cadastro de Paciente</h1>
+        <p>Preencha os dados para cadastro do paciente</p>
     </div>
+
+    <div class="section-title">
+        Dados Pessoais
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group full">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Insira seu nome completo">
+        </div>
+
+        <div class="form-group">
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00">
+        </div>
+
+        <div class="form-group">
+            <label>Data de Nascimento</label>
+            <input type="date">
+        </div>
+
+        <div class="form-group full">
+            <label>Sexo</label>
+
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="sexo">
+                    Masculino
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="sexo">
+                    Feminino
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        Contato
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group full">
+            <label>Telefone</label>
+            <input type="tel" placeholder="(85) 99999-9999">
+        </div>
+
+        <div class="form-group full">
+            <label>Email</label>
+            <input type="email" placeholder="exemplo@seudominio.com">
+        </div>
+
+        <div class="form-group">
+            <label>Endereço</label>
+            <input type="text" placeholder="Rua, número">
+        </div>
+
+        <div class="form-group">
+            <label>Cidade</label>
+            <input type="text" placeholder="Nome da cidade">
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        Informações Médicas
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group full">
+            <label>Número da Carteirinha</label>
+            <input type="text" placeholder="Insira o número da carteirinha">
+        </div>
+
+        <div class="form-group full">
+            <label>Diagnóstico</label>
+            <input type="text" placeholder="Insira seu diagnóstico">
+        </div>
+
+        <div class="form-group full">
+            <label>Observações</label>
+            <textarea placeholder="Deixe algumas observações"></textarea>
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        Segurança
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group full">
+            <label>Senha</label>
+            <input type="password"
+                   placeholder="Crie uma senha (mínimo de 7 caracteres)">
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <button class="btn btn-cancelar">
+            Cancelar
+        </button>
+
+        <button class="btn btn-cadastrar">
+            Cadastrar
+        </button>
+    </div>
+
+</div>
+
 </body>
 </html>
